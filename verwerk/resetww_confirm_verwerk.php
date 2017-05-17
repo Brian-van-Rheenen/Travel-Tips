@@ -6,7 +6,7 @@ session_start();
 		
 //Lees de gegevens uit de sessie en de header
 $email = $_SESSION['email'];
-$wachtwoord = $_POST['wachtwoord'];
+$wachtwoord = mysqli_real_escape_string($mysqli, $_POST['wachtwoord']);
 $enc_wachtwoord = md5($wachtwoord);
 		
 //Als er geen e-mailadres of code bestaat
