@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Tips: Registreer</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="images/x-icon">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/toastr/toastr.css" rel="stylesheet" type="text/css" />
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/toastr/toastr.js"></script>
+	<script src="js/toastr/toast.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/uitlog.js"></script>
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body onLoad="Menu()">
+	<header>
+		<i class="fa fa-bars toggle_menu opacity_one"></i>
+		<div>
+			<h1>Travel Tips</h1>
+		</div>	
+	</header>
+	
+	<div class="sidebar_menu hide_menu">
+		<i class="fa fa-times"></i>
+		<center>
+			<a href="../"><h1 class="boxed_item">TRAVEL <span class="logo_bold">TIPS</span></h1></a>
+			<h2 class="logo_title">Do's en Don'ts voor reizigers</h2>
+		</center>
+		
+		<div id="menu"></div>
+	</div> 
+	
+	<div class="content">
+		<img class="logo" src="images/logo.png">
+			
+		<label class="input_label">E-mail adres:</label>
+		<input type="text" name="email" class="input">
+			
+		<label class="input_label">Wachtwoord:</label>
+			
+		<div class="wachtwoord">
+			<input id="wachtwoord" type="password" name="wachtwoord" class="input">
+			<i class="fa fa-eye" id="eye" aria-hidden="true"></i>
+		</div>
+			
+		<input type="button" value="Registreer Een Account" class="input submit">
+			
+		<p class="errors"></p>
+		
+		<script type="text/javascript">
+			var btn = document.getElementById('eye');
+			btn.onmousedown = showPassword;
+			btn.onmouseup = hidePassword;
+			
+			var password = document.getElementById('wachtwoord');
+			
+			function showPassword ()
+			{
+				password.setAttribute("type", "text");
+				btn.style.opacity = 1;
+			}
+			
+			function hidePassword ()
+			{
+				password.setAttribute("type", "password");
+				btn.style.opacity = 0.5;
+			}
+		</script>
+	</div>
+</body>
+</html>
